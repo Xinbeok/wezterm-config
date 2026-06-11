@@ -52,4 +52,13 @@ if wezterm.target_triple:find("windows") then
     config.default_prog = { "powershell", "-NoLogo" }
 end
 
+-- 状态栏显示（性能监控）
+wezterm.on('update-right-status', function(window, pane)
+    local date = wezterm.strftime '%Y-%m-%d %H:%M:%S'
+    window:set_right_status(wezterm.format {
+        { Foreground = { Color = '#7aa2f7' } },
+        { Text = '  ' .. date .. ' ' },
+    })
+end)
+
 return config
