@@ -78,8 +78,8 @@ brew install starship
 - `Ctrl+Shift+Tab` - 上一个标签页
 
 ### 复制粘贴
-- `Ctrl+C` - 复制
-- `Ctrl+V` - 粘贴
+- `Ctrl+Shift+C` - 复制
+- `Ctrl+Shift+V` - 粘贴
 
 ### 其他
 - `Ctrl+Shift+R` - 重新加载配置
