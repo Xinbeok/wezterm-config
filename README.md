@@ -15,22 +15,37 @@
 
 ### Windows
 
-1. 克隆配置：
+1. 下载并安装 [WezTerm](https://wezfurlong.org/wezterm/installation.html)
+
+2. 克隆配置到任意目录：
 ```bash
-git clone https://github.com/Xinbeok/wezterm-config.git E:\WezTerm
+git clone https://github.com/Xinbeok/wezterm-config.git
 ```
 
-2. 设置环境变量：
+3. 设置环境变量（修改路径为你的实际路径）：
 ```bash
-setx WEZTERM_CONFIG_FILE "E:\WezTerm\.wezterm.lua"
+setx WEZTERM_CONFIG_FILE "你的路径\.wezterm.lua"
 ```
 
-3. 安装 Starship：
+4. 安装 Starship：
 ```bash
 winget install --id Starship.Starship
 ```
 
-4. 重启 WezTerm
+5. 设置 PowerShell 执行策略：
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+6. 配置 PowerShell 启动 Starship（创建/编辑 `$PROFILE` 文件）：
+```powershell
+$ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
+Invoke-Expression (&starship init powershell)
+```
+
+7. 安装 [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)（推荐）
+
+8. 重启 WezTerm
 
 ### Mac
 
@@ -84,8 +99,9 @@ brew install starship
 ## 📝 文件说明
 
 - `.wezterm.lua` - WezTerm 主配置文件
+- `.gitignore` - Git 忽略文件（排除 WezTerm 程序文件）
 - `add-wezterm-to-context-menu.reg` - Windows 右键菜单注册表文件（需手动导入）
-- `C:\Users\<用户名>\.config\starship.toml` - Starship 配置文件
+- Starship 配置：`C:\Users\<用户名>\.config\starship.toml`（需手动复制）
 
 ## 🔧 可选配置
 
