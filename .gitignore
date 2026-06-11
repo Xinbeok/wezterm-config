@@ -1,0 +1,10 @@
+# WezTerm 程序文件
+*.exe
+*.dll
+mesa/
+*.dat
+
+# 临时文件
+*.zip
+*.log
+.DS_Store
