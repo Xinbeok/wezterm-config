@@ -2,8 +2,8 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 -- 基础窗口设置
-config.initial_cols = 120
-config.initial_rows = 30
+config.initial_cols = 100
+config.initial_rows = 28
 config.font_size = 13.0
 
 -- 字体配置
@@ -37,10 +37,6 @@ config.keys = {
     { key = 'w', mods = 'CTRL', action = wezterm.action.CloseCurrentTab { confirm = true } },
     { key = 'Tab', mods = 'CTRL', action = wezterm.action.ActivateTabRelative(1) },
     { key = 'Tab', mods = 'CTRL|SHIFT', action = wezterm.action.ActivateTabRelative(-1) },
-
-    -- 复制粘贴优化
-    { key = 'c', mods = 'CTRL', action = wezterm.action.CopyTo 'Clipboard' },
-    { key = 'v', mods = 'CTRL', action = wezterm.action.PasteFrom 'Clipboard' },
 }
 
 -- 透明度效果
