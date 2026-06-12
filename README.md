@@ -8,14 +8,15 @@
 - 🪟 **窗格管理** - 支持分屏和多窗格操作
 - 📑 **标签页管理** - 类似浏览器的标签页体验
 - ⚡ **Starship 提示符** - 显示 Git 信息和语言版本
-- 🎯 **快捷键优化** - 支持 Ctrl+C/V 复制粘贴
+- 🎯 **快捷键优化** - 鼠标选中即复制，Ctrl+V 直接粘贴
+- 🀄 **中英文等宽字体** - Maple Mono NF CN，中英文混排大小统一
 - 💻 **跨平台兼容** - Windows 和 Mac 通用
 
 ## 🚀 快速开始
 
 ### Windows
 
-1. 下载并安装 [WezTerm](https://wezfurlong.org/wezterm/installation.html)
+1. 下载并安装 [WezTerm](https://wezfurlong.org/wezterm/installation.html)（建议装 [nightly 版](https://github.com/wez/wezterm/releases/tag/nightly)，修复了中文输入法候选框位置乱飘的 bug）
 
 2. 克隆配置到任意目录：
 ```bash
@@ -43,7 +44,7 @@ $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
 Invoke-Expression (&starship init powershell)
 ```
 
-7. 安装 [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)（推荐）
+7. 安装 [Maple Mono NF CN](https://github.com/subframe7536/maple-font/releases) 字体（下载 `MapleMono-NF-CN.zip`，至少安装 Regular/Bold/Italic/BoldItalic 四个字重）
 
 8. 重启 WezTerm
 
@@ -78,8 +79,9 @@ brew install starship
 - `Ctrl+Shift+Tab` - 上一个标签页
 
 ### 复制粘贴
-- `Ctrl+Shift+C` - 复制
-- `Ctrl+Shift+V` - 粘贴
+- 鼠标选中文本 - 自动复制到剪贴板
+- `Ctrl+V` - 粘贴
+- `Ctrl+Shift+C` / `Ctrl+Shift+V` - 复制 / 粘贴（默认快捷键，仍可用）
 
 ### 其他
 - `Ctrl+Shift+R` - 重新加载配置
@@ -94,7 +96,7 @@ brew install starship
 
 - [WezTerm](https://wezfurlong.org/wezterm/)
 - [Starship](https://starship.rs/)
-- [JetBrains Mono Nerd Font](https://www.nerdfonts.com/)（推荐）
+- [Maple Mono NF CN](https://github.com/subframe7536/maple-font)（中英文等宽字体，带 Nerd Font 图标）
 
 ## 📝 文件说明
 
