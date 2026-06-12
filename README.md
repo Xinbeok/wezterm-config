@@ -44,9 +44,15 @@ $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
 Invoke-Expression (&starship init powershell)
 ```
 
-7. 安装 [Maple Mono NF CN](https://github.com/subframe7536/maple-font/releases) 字体（下载 `MapleMono-NF-CN.zip`，至少安装 Regular/Bold/Italic/BoldItalic 四个字重）
+7. 复制仓库里的 Starship 配置到用户目录：
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.config" | Out-Null
+Copy-Item starship.toml "$HOME\.config\starship.toml"
+```
 
-8. 重启 WezTerm
+8. 安装 [Maple Mono NF CN](https://github.com/subframe7536/maple-font/releases) 字体（下载 `MapleMono-NF-CN.zip`，至少安装 Regular/Bold/Italic/BoldItalic 四个字重）
+
+9. 重启 WezTerm
 
 ### Mac
 
@@ -103,7 +109,7 @@ brew install starship
 - `.wezterm.lua` - WezTerm 主配置文件
 - `.gitignore` - Git 忽略文件（排除 WezTerm 程序文件）
 - `add-wezterm-to-context-menu.reg` - Windows 右键菜单注册表文件（需手动导入）
-- Starship 配置：`C:\Users\<用户名>\.config\starship.toml`（需手动复制）
+- `starship.toml` - Starship 提示符配置（Tokyo Night 配色，克隆后复制到 `~\.config\starship.toml`）
 
 ## 🔧 可选配置
 
