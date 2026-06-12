@@ -39,6 +39,10 @@ config.keys = {
     { key = 'Tab', mods = 'CTRL|SHIFT', action = wezterm.action.ActivateTabRelative(-1) },
 }
 
+-- 输入法配置：nightly 已修复候选框乱飘 bug，默认 Builtin 渲染即可
+-- 如果候选框又开始乱飘，取消下面这行的注释
+-- config.ime_preedit_rendering = "System"
+
 -- 透明度效果
 config.window_background_opacity = 0.95
 config.text_background_opacity = 0.9
