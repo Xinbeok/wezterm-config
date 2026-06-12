@@ -4,12 +4,11 @@ local config = wezterm.config_builder()
 -- 基础窗口设置
 config.initial_cols = 100
 config.initial_rows = 28
-config.font_size = 13.0
+config.font_size = 12.0
 
--- 字体配置
+-- 字体配置：Maple Mono NF CN 中英文一体设计，中文严格两倍宽，粗斜体统一
 config.font = wezterm.font_with_fallback({
-    "JetBrains Mono",
-    "Fira Code",
+    "Maple Mono NF CN",
     "Noto Color Emoji"
 })
 config.line_height = 1.2
