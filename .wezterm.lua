@@ -32,6 +32,9 @@ config.keys = {
     -- 关闭窗格
     { key = 'w', mods = 'CTRL|SHIFT', action = wezterm.action.CloseCurrentPane { confirm = true } },
 
+    -- 粘贴（Ctrl+V）
+    { key = 'v', mods = 'CTRL', action = wezterm.action.PasteFrom 'Clipboard' },
+
     -- 标签页管理
     { key = 't', mods = 'CTRL', action = wezterm.action.SpawnTab 'CurrentPaneDomain' },
     { key = 'w', mods = 'CTRL', action = wezterm.action.CloseCurrentTab { confirm = true } },
